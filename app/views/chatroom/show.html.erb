@@ -1,0 +1,11 @@
+<h1 class="text-center"> Live Chat </h1>
+
+<div id="chat-box"></div>
+
+<div id="chat-input">
+  <%= form_tag("/chatroom", method: "post", remote: true) do %>
+    <%= label_tag(:message, "Message:") %>
+    <%= text_field_tag(:message) %>
+    <%= submit_tag("Send", class: "btn btn-default") %>
+  <% end %>
+</div>
